@@ -78,7 +78,9 @@ public class P7_Test1 {
                 else
                     JOptionPane.showMessageDialog(null, "It doesn't have an exact division.");
                 break;
+
             case "6":
+                // Excercise 6;
                 int code = Integer.parseInt(JOptionPane.showInputDialog(null, "Insert a number from the ASCII code.",
                         "Traslator of ASCII", 1));
                 char ASCIIcode = (char) code;
@@ -87,12 +89,45 @@ public class P7_Test1 {
                 break;
 
             case "7":
+                // Excercise 7;
                 String code2 = JOptionPane.showInputDialog(null, "Insert a code from the ASCII code.",
                         "Traslator of ASCII", 1);
                 char code2char = code2.charAt(0);
                 int numericalindex = (int) code2char;
                 JOptionPane.showMessageDialog(null, "The numerical index is " + numericalindex + ".",
                         "The index reference of the ASCII code.", 1);
+                break;
+
+            case "8":
+                // Excercise 8;
+                float ProductPrice = Float.parseFloat(JOptionPane.showInputDialog(null,
+                        "Insert the price of the product: ", "Calcule of a product price.", 1));
+                float finalPrice = ProductPrice * (1.21f);
+                JOptionPane.showMessageDialog(null, "The final price is " + finalPrice + " coins.");
+                break;
+
+            case "9":
+                // Excercise 9;
+                for (byte timer = 1; timer <= 100; timer++)
+                    System.out.println("The actual number is " + timer + ".");
+                break;
+
+            case "10":
+                // Excercise 10;
+                byte timer2 = 1;
+                while (timer2 <= 100) {
+                    System.out.println("The actual number is " + timer2 + ".");
+                    timer2++;
+                }
+                break;
+
+            case "11":
+                // Excercise 11;
+                for (int timer3 = 1; timer3 <= 100; timer3++) {
+                    boolean residuos = (timer3 % 2 == 0 | timer3 % 3 == 0) ? true : false;
+                    if (residuos)
+                        System.out.println("The actual number is " + timer3 + ".");
+                }
                 break;
         }
     }

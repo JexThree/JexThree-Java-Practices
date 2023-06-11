@@ -4,7 +4,7 @@ public abstract class AbstractClasses {
 
     /*
      * And abstract class is an incomplete class;
-     * Practically it has abstract methos and concrete methods as well;
+     * Practically it has abstract methods and concrete methods as well;
      */
 
     public abstract void Enver();
@@ -15,7 +15,7 @@ public abstract class AbstractClasses {
 
     /*
      * The are only abstracts methods and classes;
-     * Abstracts camps are nevermind;
+     * Abstracts fields are nevermind;
      * 
      * abstract int varible1;
      * "This kind of variables are nevermind"

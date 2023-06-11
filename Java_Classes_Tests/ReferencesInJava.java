@@ -5,7 +5,7 @@ public class ReferencesInJava {
         int array1[] = new int[10];
         /*
          * The word "new" is use to point to a certain java class;
-         * When a camp like "array1[]" is created using the word new, we are talking
+         * When a field like "array1[]" is created using the word new, we are talking
          * about a reference;
          * It is beacuse the "array1[]" is refering to a certain class, the class: int
          * [];
@@ -13,10 +13,11 @@ public class ReferencesInJava {
 
         int array2[] = null;
         /*
-         * With the word "null", we're saying that the camp is not pointing to a cetain
+         * With the word "null", we're saying that the field is not pointing to a cetain
          * class;
-         * The java cleaner is going to clean the unnecesary stuff in the camp, so we're
-         * going to be saving memory;
+         * The java cleaner is going to clean the unnecesary stuff in the variable, so
+         * we're
+         * going to be saving memory space;
          * You can call the java cleaner in a handly way with the comand System.gc();
          */
 

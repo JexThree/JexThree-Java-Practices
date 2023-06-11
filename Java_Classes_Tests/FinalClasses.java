@@ -3,9 +3,9 @@ package Java_Classes_Tests;
 public final class FinalClasses {
 
     /*
-     * The word final is use to create final classes, final methods and final camps
+     * The word final is use to create final classes, final methods and final fields
      * as well;
-     * Yeap, because there are final camps;
+     * Yeap, because there are final fields;
      * 
      * As you can see, this is a final class, and what with that, well;
      * It's important to know that the final classes cannot be extend, so yeap, a
@@ -14,7 +14,8 @@ public final class FinalClasses {
 
     public final int One = 1;
     /*
-     * That's a final camp. It's funcionality is based in being an uneditable camp;
+     * That's a final field. It's funcionality is based in being an uneditable
+     * field;
      * So, yeah, in this example, the int One is uneditable;
      */
 
@@ -40,7 +41,7 @@ public final class FinalClasses {
          * If the object is from the class asigned in the left side, it's going to
          * return a true boolean value;
          * If the object isn't from the class asigned in the left side, it's going to
-         * return a flase boolean value;
+         * return a false boolean value;
          */
     }
 

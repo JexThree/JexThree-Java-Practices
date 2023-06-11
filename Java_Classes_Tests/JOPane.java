@@ -11,7 +11,7 @@ public class JOPane {
 
         String b = JOptionPane.showInputDialog(null, "What are thinking right now?", "Hello my friend.", a);
         /*
-         * It is a little bit different, it is goign to show a certain kind of massage;
+         * It is a little bit different, it is going to show a certain kind of massage;
          * Here you can write a certain title and a certain message;
          * Also, you can change the presentation of the pane writting from 0 to 4 in the
          * last parameter of the method;
@@ -19,7 +19,7 @@ public class JOPane {
          */
 
         JOptionPane.showMessageDialog(null, b, "This is your answer.", a);
-        // It is like a println, it is going to show a pane with text, that's it;
+        // It is like a print, it is going to show a pane with text, that's it;
 
         JOptionPane.showMessageDialog(null, "Thanks for answering me.");
         // It is a simplier way to use the method;

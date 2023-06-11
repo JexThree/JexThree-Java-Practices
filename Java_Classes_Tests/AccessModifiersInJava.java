@@ -13,7 +13,7 @@ public class AccessModifiersInJava {
          * 3) protected = The method or variable is only accessible for the daughter's classes of a father class;
          * 4) friendly = The method or variable is only accessible for the classes in the same package. 
          *    (This mod doesn't exist properly. If you want to use it, you only need to write nothing.);
-         * We use them to indicate the visibility of a certain camp(Atribute) or a method;
+         * We use them to indicate the visibility of a certain field(Atribute) or a method;
          */
 
         // To check it up, I'm going to use the P2_Robot class.
