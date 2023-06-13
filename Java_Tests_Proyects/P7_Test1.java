@@ -129,6 +129,29 @@ public class P7_Test1 {
                         System.out.println("The actual number is " + timer3 + ".");
                 }
                 break;
+
+            case "12":
+                // Excercise 11;
+                int squares = Integer.parseInt(JOptionPane.showInputDialog(null,
+                        "Insert the number of sales:", "Sales array.", 1));
+                float[] salesArray = new float[squares];
+                float result = 0;
+                int X = 0;
+                // First I the fields for this excersice;
+                for (float box : salesArray) {
+                    box = Float.parseFloat(JOptionPane.showInputDialog(null,
+                            "Insert the amount of a sale.", "Initialization.", 1));
+                    salesArray[X] = box;
+                    result += salesArray[X];
+                    X++;
+                }
+                /*
+                 * Then, I used a for cicle to initialise the array;
+                 * But also to make the sum;
+                 */
+                JOptionPane.showMessageDialog(null,
+                        "The total sum is: " + result, "The amount of sales.", 1);
+                break;
         }
     }
 }
