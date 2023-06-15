@@ -131,7 +131,7 @@ public class P7_Test1 {
                 break;
 
             case "12":
-                // Excercise 11;
+                // Excercise 12;
                 int squares = Integer.parseInt(JOptionPane.showInputDialog(null,
                         "Insert the number of sales:", "Sales array.", 1));
                 float[] salesArray = new float[squares];
@@ -152,6 +152,127 @@ public class P7_Test1 {
                 JOptionPane.showMessageDialog(null,
                         "The total sum is: " + result, "The amount of sales.", 1);
                 break;
+            case "13":
+                // Excersice 13;
+
+                // First, I'm going to ask for the numbers;
+
+                float a = Float.parseFloat(JOptionPane.showInputDialog(null, "Insert the number a"));
+                // System.out.println("a = " + a);
+
+                float b = Float.parseFloat(JOptionPane.showInputDialog(null, "Insert the number b"));
+                // System.out.println("b = " + b);
+
+                float c = Float.parseFloat(JOptionPane.showInputDialog(null, "Insert the number c"));
+                // System.out.println("c = " + c);
+
+                // Then, I have to find the radical;
+
+                float radical = (b * b) - (4 * a * c);
+                // System.out.println("Radical = " + radical);
+
+                // And, to finish this, I only have to calcule the rest of the formule;
+                double result1 = -b + (Math.sqrt(radical));
+                // System.out.println("Result1 = " + result1);
+                result1 /= 2 * a;
+                // System.out.println("FinalResult2 = " + result1);
+
+                double result2 = -b - (Math.sqrt(radical));
+                // System.out.println("Result2 = " + result2);
+                result2 /= 2 * a;
+                // System.out.println("FinalResult2 = " + result2);
+
+                // Here, I'm showing the answer;
+                JOptionPane.showMessageDialog(null, "The answers are: \n" + result1 + "\n" + result2);
+                break;
+
+            case "14":
+                // Excercise 14;
+
+                boolean redFlag;
+
+                do {
+                    int number1 = Integer.parseInt(JOptionPane.showInputDialog(null,
+                            "Insert a number major or equal to zero.", "Excercise do-while.", 1));
+
+                    if (number1 >= 0) {
+                        JOptionPane.showMessageDialog(null, "It's a correct number.");
+                        redFlag = false;
+                    } else {
+                        JOptionPane.showMessageDialog(null, "It isn't a correct number. \nTry again, please.");
+                        redFlag = true;
+                    }
+                } while (redFlag);
+
+                break;
+
+            case "15":
+                // Excersice 15;
+
+                final String password = "MLP";
+
+                JOptionPane.showMessageDialog(null,
+                        "Welcome to excersice 15.\nTo solve this test, you have to divine a certain String.\nYou'll have three chances.\nLet's start.");
+
+                for (int timer14 = 1; timer14 <= 3; timer14++) {
+
+                    if (timer14 == 1)
+                        JOptionPane.showMessageDialog(null,
+                                "It's a franchise for children.\nIt's a huge fandom.\nHorses.", "Some advices.", 1);
+
+                    if (timer14 == 2)
+                        JOptionPane.showMessageDialog(null,
+                                "The show is about friendship.\nIt's magic.", "More avdices.", 1);
+
+                    if (timer14 == 3)
+                        JOptionPane.showMessageDialog(null,
+                                "It is its acronym.\nWithout 'FIM'", "More avdices.", 1);
+
+                    String yourAnswer = JOptionPane.showInputDialog(null,
+                            "Please, write your answer: ", "Guessing time.", 3);
+
+                    int equality = yourAnswer.compareToIgnoreCase(password);
+
+                    if (equality == 0) {
+                        JOptionPane.showMessageDialog(null,
+                                "You could divine it.\nWell played.\nB)", "Congratulations.", 1);
+                        break;
+                    } else
+                        JOptionPane.showMessageDialog(null, "Sorry, it wasn't.\nLet's try again.\n:)", "Wrong!", 0);
+                }
+
+                break;
+
+            case "16":
+                // Excersice 16;
+
+                String day = JOptionPane.showInputDialog(null,
+                        "Please, write a day of the week: ", "Days of the week.", 3);
+
+                switch (day) {
+                    case "Monday":
+                    case "Tuesday":
+                    case "Wednesday":
+                    case "Thrusday":
+                    case "Friday":
+                    case "monday":
+                    case "tuesday":
+                    case "wednesday":
+                    case "thrusday":
+                    case "friday":
+                        JOptionPane.showMessageDialog(null, "It's a labor day.");
+                        break;
+                    case "Saturday":
+                    case "Sunday":
+                    case "saturday":
+                    case "sunday":
+                        JOptionPane.showMessageDialog(null, "It isn't a labor day.");
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null,
+                                "It isn't even a day.\nLittle troll.\nB)", "Wrong!", 0);
+                        break;
+                }
         }
     }
 }
