@@ -350,8 +350,21 @@ public class P7_Test1 {
                 break;
 
             case "21":
-                JOptionPane.showInputDialog(null,
+                String words = JOptionPane.showInputDialog(null,
                         "Insert a String: ", "Count of a string.", 1);
+                int totalOfVocals = 0;
+
+                for (int timer21 = words.length(); timer21 > 0; timer21--) {
+                    char[] vocalsArray = { 'a', 'e', 'i', 'o', 'u' };
+                    char letter = words.charAt(timer21 - 1);
+
+                    for (char vocal : vocalsArray)
+                        if (letter == vocal)
+                            totalOfVocals++;
+                }
+
+                JOptionPane.showMessageDialog(null,
+                        "There are " + totalOfVocals + " vocals.", "Total.", 1);
                 break;
         }
     }
