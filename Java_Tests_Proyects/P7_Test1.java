@@ -273,6 +273,86 @@ public class P7_Test1 {
                                 "It isn't even a day.\nLittle troll.\nB)", "Wrong!", 0);
                         break;
                 }
+                break;
+
+            case "17":
+                // Excercise 17;
+
+                int lowernumber = Integer.parseInt(JOptionPane.showInputDialog(null,
+                        "Insert a random number.", "Lower number limit.", 1));
+                int uppernumber = Integer.parseInt(JOptionPane.showInputDialog(null,
+                        "Insert a random number.\nHigher than the first one.", "Upper number limit.", 1));
+                for (int timer17 = 0; timer17 < 10; timer17++) {
+                    boolean flag17 = true;
+                    do {
+                        int Randnum = (int) (10 * Math.random());
+                        if (Randnum > lowernumber & Randnum < uppernumber) {
+                            System.out.println(Randnum);
+                            flag17 = false;
+                        } else {
+                            flag17 = true;
+                        }
+                    } while (flag17);
+                }
+                break;
+
+            case "18":
+                String digitalNum = JOptionPane.showInputDialog(null,
+                        "Insert a number of one or more digits.", "Digits if a number.", 1);
+                int digits = digitalNum.length();
+                int digitalNumint = Integer.parseInt(digitalNum);
+                if (digitalNumint > 0)
+                    JOptionPane.showMessageDialog(null,
+                            "The number of digits is: " + digits, "Number of digits.", 1);
+                else
+                    JOptionPane.showMessageDialog(null,
+                            "The number of digits is: " + --digits, "Number of digits.", 1);
+                break;
+
+            case "19":
+                // Excercise 19;
+                int cousinNumber = Integer.parseInt(JOptionPane.showInputDialog(null,
+                        "Insert a number.", "Cousin numbers.", 1));
+                int timer19 = 0;
+
+                for (int t19 = cousinNumber; t19 > 1; t19--) {
+                    int residue19 = cousinNumber % t19;
+                    if (residue19 == 0)
+                        timer19++;
+                }
+
+                if (timer19 == 1)
+                    JOptionPane.showMessageDialog(null,
+                            "The number " + cousinNumber + " is a cousin number.", "True.", 1);
+                else
+                    JOptionPane.showMessageDialog(null,
+                            "The number " + cousinNumber + " is not a cousin number.", "False", 1);
+                break;
+
+            case "20":
+                // Excercise 19;
+                JOptionPane.showMessageDialog(null,
+                        "These are the cousin numbers between 1 to 100.", "Cousin numbers.", 1);
+                System.out.println("List of numbers:");
+
+                for (int X20 = 0; X20 <= 100; X20++) {
+                    int timer20 = 0;
+
+                    for (int t20 = X20; t20 > 1; t20--) {
+                        int residue20 = X20 % t20;
+                        if (residue20 == 0)
+                            timer20++;
+                    }
+
+                    if (timer20 == 1)
+                        System.out.println(X20);
+                }
+                break;
+
+            case "21":
+                JOptionPane.showInputDialog(null,
+                        "Insert a String: ", "Count of a string.", 1);
+                break;
         }
     }
 }
