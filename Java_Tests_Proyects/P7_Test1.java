@@ -330,7 +330,7 @@ public class P7_Test1 {
                 break;
 
             case "20":
-                // Excercise 19;
+                // Excercise 20;
                 JOptionPane.showMessageDialog(null,
                         "These are the cousin numbers between 1 to 100.", "Cousin numbers.", 1);
                 System.out.println("List of numbers:");
@@ -350,6 +350,7 @@ public class P7_Test1 {
                 break;
 
             case "21":
+                // Excercise 21;
                 String words = JOptionPane.showInputDialog(null,
                         "Insert a String: ", "Count of a string.", 1);
                 int totalOfVocals = 0;
@@ -365,6 +366,29 @@ public class P7_Test1 {
 
                 JOptionPane.showMessageDialog(null,
                         "There are " + totalOfVocals + " vocals.", "Total.", 1);
+                break;
+
+            case "22":
+                // Excercise 22;
+                String original22 = JOptionPane.showInputDialog(null,
+                        "Insert a String:", "Any vocal to 'a'.", 1);
+                String copy22 = original22;
+                String newString = "";
+                int extension22 = copy22.length() - 1;
+
+                for (int n = 0; n <= extension22; n++) {
+                    char letter22 = copy22.charAt(n);
+
+                    if (letter22 == 'e' || letter22 == 'E' || letter22 == 'i' || letter22 == 'I' || letter22 == 'o'
+                            || letter22 == 'O' || letter22 == 'u' || letter22 == 'U')
+                        letter22 = 'a';
+
+                    String vocal = String.valueOf(letter22);
+                    newString += vocal;
+                }
+
+                JOptionPane.showMessageDialog(null,
+                        "The new String is " + newString + ".");
                 break;
         }
     }
