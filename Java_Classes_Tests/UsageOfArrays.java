@@ -47,17 +47,18 @@ public class UsageOfArrays {
         int example;
 
         /*
-         * 1) .binarySearch()
+         * 1) .binarySearch( <arrayName>, valueInArray ) --> index int
          * It will look for the position of the value signed in the parameters;
          * It will return the index of the value as an int;
          */
 
         example = Arrays.binarySearch(arrayOfStrings, "Eduardo");
-        System.out.println("binarySearch()");
+        System.out.println("");
+        System.out.println("binarySearch( <arrayName>, valueInArray ) --> index int");
         System.out.println("The index of Eduardo is " + example);
 
         /*
-         * 2) .copyOf()
+         * 2) .copyOf( <arrayName>, lenghtOfTheNewOne ) --> Array
          * It will copy the elements of an array to another one;
          * Both have to be the same type of data;
          */
@@ -66,12 +67,13 @@ public class UsageOfArrays {
         // Note: It will copy until the lenght signed, but it won't copy the limit
         // number;
 
-        System.out.println("copyOf()");
+        System.out.println("");
+        System.out.println("copyOf( <arrayName>, lenghtOfTheNewOne ) --> Array");
         for (String c : copyOfStrings)
             System.out.println(c);
 
         /*
-         * 3) .copyOfRange()
+         * 3) .copyOfRange( <arrayName>, leftLimit, rightLimit ) --> Array
          * It will copy the elements of an array to another one;
          * It'll work with two limits;
          * Both have to be the same type of data;
@@ -80,19 +82,21 @@ public class UsageOfArrays {
 
         copyOfStrings = Arrays.copyOfRange(arrayOfStrings, 1, 3);
 
-        System.out.println("copyOfRange()");
+        System.out.println("");
+        System.out.println("copyOfRange( <arrayName>, leftLimit, rightLimit ) --> Array");
         for (String c : copyOfStrings)
             System.out.println(c);
 
         /*
-         * 4) .equals()
+         * 4) .equals( <arrayName>, <arrayName> ) --> boolean (true/false)
          * It'll compare to arrays and will return a boolean (true/false) value;
          */
 
         char[] arrayOfChars2 = { '1', '2', '3' };
         boolean flag = Arrays.equals(arrayOfChars, arrayOfChars2);
 
-        System.out.println("equals()");
+        System.out.println("");
+        System.out.println("equals( <arrayName>, <arrayName> ) --> boolean (true/false)");
         if (flag) {
             System.out.println("They're the same.");
         } else {
@@ -100,13 +104,26 @@ public class UsageOfArrays {
         }
 
         /*
-         * 5) .fill()
+         * 5) .fill( <arrayName>, newValue ) --> void
          * This method is in charge to change the value of each element;
          * It'll change it with the value signed;
          */
 
         Arrays.fill(arrayOfChars2, '4');
+        System.out.println("");
         System.out.println("fill()");
-        System.out.println(arrayOfChars2[2]);
+        for (char c : arrayOfChars2)
+            System.out.println(c);
+
+        /*
+         * 6) .toString( <arrayName> )
+         * This method will return a String of the values in the array;
+         * { value1, value2, ..., valueN }
+         */
+
+        System.out.println("");
+        System.out.println("toString()");
+        System.out.println("arrayOfInts: " + Arrays.toString(arrayOfInts));
+
     }
 }
