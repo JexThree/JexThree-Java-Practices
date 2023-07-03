@@ -95,5 +95,67 @@ public class P8_LoopExercises {
             System.out.println("");
             // This will do a line jump;
         }
+
+        System.out.println("");
+        // 5) Steristics pyramid;
+        int number5 = Integer.parseInt(JOptionPane.showInputDialog(null,
+                "Insert the highness of the pyramid.", "Steristics pyramid.", 1));
+        // This will indicate pyramid highness;
+
+        int sp1 = number5 - 1;
+        // This field will count the spaces;
+
+        int s1 = 1;
+        // This field will count the steristics;
+
+        for (int a = 1; a <= number5; a++) {
+            // The first huge for will count the pyramid steps;
+
+            for (int b = 1; b <= sp1; b++)
+                // The second for will do spaces according to sp1;
+                System.out.print(" ");
+
+            for (int c = 1; c <= s1; c++)
+                // The third for will do steristics according to s1;
+                System.out.print("*");
+
+            System.out.println("");
+            // After the two fors, it'll make a line jump;
+
+            sp1--;
+            s1 += 2;
+            // It's going to reduce the spaces and to increase the steristics;
+        }
+
+        System.out.println("");
+        // 6) Inverse steristics pyramid;
+        int number6 = Integer.parseInt(JOptionPane.showInputDialog(null,
+                "Insert the highness of the pyramid.", "Inverse steristics pyramid", 1));
+        // This will indicate the pyramid highness;
+
+        int sp2 = 0;
+        // This variable will count the number of spaces;
+
+        int s2 = (2 * number6) - 1;
+        // This variable will count the number of steristics;
+
+        for (int a = 1; a <= number6; a++) {
+            // The first huge for will count the pyramid steps;
+
+            for (int b = 1; b <= sp2; b++)
+                // The second for will do spaces according to sp2;
+                System.out.print(" ");
+
+            for (int c = 1; c <= s2; c++)
+                // The third for will do steristics according to s2;
+                System.out.print("*");
+
+            System.out.println("");
+            // After the two fors, it'll make a line jump;
+
+            s2 -= 2;
+            sp2++;
+            // It's going to reduce the steristics and to increase the spaces;
+        }
     }
 }
