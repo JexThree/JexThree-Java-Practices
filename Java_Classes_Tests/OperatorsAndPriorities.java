@@ -33,7 +33,7 @@ public class OperatorsAndPriorities {
         int[] array = new int[11];
         // This is an example of new;
 
-        for (int C = 0; C <= 10; C++) {
+        for (int C = 0; C <= 4; C++) {
 
             if (C == 0) {
                 array[C] = 2 * (a + b);
