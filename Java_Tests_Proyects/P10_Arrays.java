@@ -70,15 +70,15 @@ public class P10_Arrays {
     }
 
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+        try (Scanner keyboard = new Scanner(System.in)) {
+            System.out.print("Insert the size of your array: ");
+            int num = keyboard.nextInt();
 
-        System.out.print("Insert the size of your array: ");
-        int num = keyboard.nextInt();
+            P10_Arrays array = new P10_Arrays(num);
 
-        P10_Arrays array = new P10_Arrays(num);
-
-        array.arrayInitialization();
-        array.arrayPrinter();
-        array.arraySum();
+            array.arrayInitialization();
+            array.arrayPrinter();
+            array.arraySum();
+        }
     }
 }
